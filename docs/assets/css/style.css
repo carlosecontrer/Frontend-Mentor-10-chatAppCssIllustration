@@ -159,7 +159,7 @@ main .paragraph {
 .mobile__background {
   background-color: #f5f3f7;
   width: calc(100% - 5px);
-  height: calc(100% - 4px);
+  height: 500px;
   top: 0;
   right: 0;
   bottom: 0;
@@ -255,7 +255,7 @@ main .paragraph {
   width: 95%;
   height: 2rem;
   margin: auto;
-  margin-top: 25px;
+  margin-top: 35px;
   background-color: white;
   border-radius: 30px;
   display: flex;
@@ -284,5 +284,6 @@ main .paragraph {
 @media screen and (min-width: 1280px) {
   .mobile {
     min-width: 250px;
+    min-height: 505px;
   }
 }
