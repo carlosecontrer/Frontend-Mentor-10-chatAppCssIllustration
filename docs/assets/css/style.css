@@ -16,6 +16,9 @@ body {
   background-color: #fafafa;
   width: 100vw;
   height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 body::before, body::after {
   content: "";
@@ -43,8 +46,13 @@ main {
   overflow: hidden;
   padding-left: 36px;
   padding-right: 36px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
 }
-main .title, main .paragraph {
+main .title,
+main .paragraph {
   text-align: center;
 }
 main .title {
@@ -59,6 +67,46 @@ main .paragraph {
   line-height: 1.75rem;
 }
 
+@media screen and (min-width: 1280px) {
+  body {
+    overflow: hidden;
+  }
+  body::before, body::after {
+    height: 155vh;
+  }
+  body::before {
+    width: 35vw;
+    border-radius: 380px;
+    left: -8%;
+    top: -65%;
+  }
+  body::after {
+    width: 25vw;
+    height: 80vh;
+    bottom: 0;
+    border-top-left-radius: 350px;
+  }
+
+  main {
+    flex-direction: row;
+    width: 860px;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    margin-left: 3rem;
+  }
+  main .title,
+main .paragraph {
+    text-align: left;
+    width: 450px;
+    line-height: 1.5rem;
+  }
+
+  .description {
+    margin-left: 100px;
+  }
+}
 .user {
   font-size: 0.45rem;
   display: flex;
@@ -232,4 +280,10 @@ main .paragraph {
   border: 0;
   background-color: #3e2753;
   color: #f5f3f7;
+}
+
+@media screen and (min-width: 1280px) {
+  .mobile {
+    min-width: 250px;
+  }
 }
