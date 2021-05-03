@@ -1,0 +1,26 @@
+@use 'config/variables' as *;
+.user {
+  font-size: 0.45rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+//  justify-content: space-between;
+  //padding: 30px;
+  &__info {
+      width: 130px;
+    p,
+    h2 {
+      margin: 0;
+      padding: 0;
+      margin-left: 16px;
+      opacity: .75;
+    }
+  }
+  &__picture {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    border: 2px solid $LightGrayishViolet;
+  }
+}

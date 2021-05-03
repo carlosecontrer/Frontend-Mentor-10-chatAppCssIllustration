@@ -1,0 +1,4 @@
+@use 'config/variables' as *;
+@use 'base/base.scss';
+@use 'blocks/mobile';
+/*# sourceMappingURL=style.css.map */

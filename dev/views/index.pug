@@ -1,0 +1,49 @@
+include mixins/user
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        link(rel='icon' type='image/png' sizes='32x32' href='./assets/img/favicon-32x32.png')
+        link(rel='preconnect' href='https://fonts.gstatic.com')
+        link(href='https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap' rel='stylesheet')
+        link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css")
+        link(rel="stylesheet" href="./assets/css/style.css")
+        title Frontend Mentor | Chat App CSS Illustration
+    body
+        main
+            section.mobile
+                .mobile__background
+                    header.mobile__header
+                        i.fas.fa-chevron-left  
+                        +user("./assets/img/avatar.jpg", "Samuel Green", "Aviable to Walk")
+                        i.fas.fa-ellipsis-v
+                    .mobile__message--container
+                        p.mobile__message.mobile__message--left That sounds great. I’d be happy with that.
+                    .mobile__message--container
+                        p.mobile__message.mobile__message--left Could you send over some pictures of your dog, please?
+                    .mobile__message--image-container.mobile__message--right
+                        img.mobile__mesage.mobile__message--image(src="./assets/img/dog-image-1.jpg" alt="")
+                        img.mobile__mesage.mobile__message--image(src="./assets/img/dog-image-2.jpg" alt="")
+                        img.mobile__mesage.mobile__message--image(src="./assets/img/dog-image-3.jpg" alt="")
+                    .mobile__message--container
+                        p.mobile__message.mobile__message--right Here are a few pictures. She’s a happy girl!
+                    .mobile__message--container
+                        p.mobile__message.mobile__message--right Can you make it?
+                    .mobile__message--container
+                        p.mobile__message.mobile__message--left  She looks so happy! The time we discussed works. How long shall I take her out for?
+                    .mobile__message.mobile__message--price
+                        i.far.fa-clock 
+                        p 30 minute walk 
+                        span $29
+                    .mobile__message.mobile__message--price
+                        i.far.fa-clock 
+                        p 1 hour walk 
+                        span $49
+                    form(action="").mobile__form
+                        input(type="text" placeholder="Type a message...") 
+                        button(type="submit") 
+                            i.fas.fa-chevron-right
+            h1.title Simple Booking
+            p.paragraph Stay in touch with our dog walkers through the chat interface. This makes it easy to discuss arrangements and make bookings. Once the walk has been completed you can rate your walker and book again all through the chat. 

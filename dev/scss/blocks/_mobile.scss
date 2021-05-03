@@ -1,0 +1,167 @@
+@use 'config/variables' as *;
+.mobile {
+  background-color: $White;
+  width: 250px;
+  height: 505px;
+  border-radius: 28px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 65px;
+  padding: 10px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0px 0px 32px -5px rgba($VeryDarkDesaturatedViolet, 0.75);
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 130px;
+    height: 28px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: $White;
+    border-bottom-left-radius: 13px;
+    border-bottom-right-radius: 13px;
+  }
+  &__background {
+    background-color: $LightGrayishViolet;
+    width: calc(100% - 5px);
+    height: calc(100% - 4px);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    border-radius: 24px;
+  }
+  &__header {
+    background-image: $violet-gradient;
+    color: $LightGrayishViolet;
+    padding: 10px;
+    padding-top: 25px;
+    width: 100%;
+    height: 66px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    i {
+      font-size: 0.8rem;
+    }
+  }
+  &__message {
+    font-size: 0.5rem;
+    &--container p {
+      background-color: $White;
+      max-width: 128px;
+      padding: 0.5rem;
+      margin: 0.4rem;
+      &.mobile__message--left{
+        background-color:rgba($paleViolet, .18);
+      }
+    }
+    &--image-container{
+        width: 136px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-right: .4rem;
+        
+    }
+    
+    &--image {
+      width: 40px;
+      height: 40px;
+      padding: 0;
+      margin: 0;
+      border-radius: 10px;
+      
+    }
+    &--left{
+        float: left;
+        clear: both;
+        color: $moderateViolet;
+        border-radius: 10px;
+        border-bottom-left-radius: 5px;
+        
+        
+    }
+    &--right{
+        float: right;
+        clear: both;
+        border-radius: 10px;
+        border-bottom-right-radius:5px ;
+        color: $desaturatedDarkViolet;
+    }
+    &--price{
+        //float: left;
+        clear: both;
+        
+        width: 160px;
+        height: 32px;
+        padding: 0.5rem;
+      
+        margin: 0.30rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background:$violet-gradient ;
+        border-radius: 10px;
+        border-bottom-left-radius: 5px;
+        color: $White;
+        span,i{
+            font-size: .80rem;
+            
+        }
+        i{
+            font-weight: 400;
+        }
+        span{
+            font-weight: 700;
+        }
+        p{
+            font-size: .5rem;
+        
+        }
+
+    }
+  }
+  &__form{
+      width: 95%;
+      height: 2rem;
+      margin: auto;
+     margin-top: 25px;
+
+      background-color: $White;
+      border-radius:30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      overflow: hidden;
+      input{
+          border:0;
+          outline: hidden;
+          &::placeholder{
+              font-size: .60rem;
+              margin-left: 1.5rem;
+              color: $grayishBlue;
+          }
+      }
+      button{
+          width: 1.5rem;
+          height: 1.5rem;
+          border-radius: 50%;
+          border: 0;
+          background-color: $VeryDarkDesaturatedViolet;
+          color: $LightGrayishViolet;
+      }
+  }
+}
